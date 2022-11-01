@@ -31,8 +31,6 @@ gem 'jbuilder'
 
 gem 'devise'
 gem 'nokogiri'
-gem 'rubocop-rails'
-gem 'rubocop-rspec'
 gem 'ruby_parser'
 
 # Use Redis adapter to run Action Cable in production
@@ -62,6 +60,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
 end
 
 group :development do
