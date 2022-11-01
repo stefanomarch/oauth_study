@@ -37,6 +37,10 @@ Style/StringLiterals:
   Exclude:
     - 'db/schema.rb'
 
+Style/Documentation:
+  Exclude:
+    - 'db/migrate/*'
+
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns, IgnoredPatterns.
