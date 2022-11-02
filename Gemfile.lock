@@ -167,6 +167,9 @@ GEM
     omniauth-oauth2 (1.8.0)
       oauth2 (>= 1.4, < 3)
       omniauth (~> 2.0)
+    omniauth-rails_csrf_protection (1.0.1)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.1)
@@ -302,9 +305,11 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   nokogiri
+  omniauth (~> 2.0)
   omniauth-facebook
   omniauth-github
   omniauth-google-oauth2
+  omniauth-rails_csrf_protection (~> 1.0)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)

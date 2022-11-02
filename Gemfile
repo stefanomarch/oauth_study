@@ -33,9 +33,11 @@ gem 'devise'
 gem 'nokogiri'
 gem 'ruby_parser'
 
+gem 'omniauth', '~> 2.0'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 gem 'activerecord-session_store'
 

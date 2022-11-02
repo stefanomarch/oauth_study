@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Create user from the provider data
-class OmniauthController < ApplicationController
+class OmniauthCallbackController < ApplicationController
   def google_oauth2
     @user = User.create_from_provider_data(request.env['omniauth.auth'])
     if @user.persisted?
