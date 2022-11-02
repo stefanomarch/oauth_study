@@ -281,7 +281,8 @@ Devise.setup do |config|
   #  scope is what we would like back from the service
   config.omniauth :github, retrieve_credential(:github, :client_id), retrieve_credential(:github, :secret), scope: 'public_profile, email'
   config.omniauth :facebook, retrieve_credential(:facebook, :client_id), retrieve_credential(:facebook, :secret), scope: 'user,public_repo'
-  config.omniauth :google_oauth2, retrieve_credential(:google, :client_id), retrieve_credential(:google, :secret), scope: 'userinfo.email, userinfo.profile'
+  config.omniauth :google_oauth2, retrieve_credential(:google, :client_id), retrieve_credential(:google, :secret),
+                  scope: 'userinfo.email, userinfo.profile'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
