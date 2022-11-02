@@ -280,7 +280,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   #  scope is what we would like back from the service
   config.omniauth :github, retrieve_credential(:github, :client_id), retrieve_credential(:github, :secret), scope: 'public_profile, email'
-  config.omniauth :facebook, retrieve_credential(:facebook, :client_id), retrieve_credential(:facebook, :secret), scope: 'user,public_repo'
+  config.omniauth :facebook, retrieve_credential(:facebook, :client_id), retrieve_credential(:facebook, :secret)
   config.omniauth :google_oauth2, retrieve_credential(:google, :client_id), retrieve_credential(:google, :secret),
                   scope: 'userinfo.email, userinfo.profile'
 
