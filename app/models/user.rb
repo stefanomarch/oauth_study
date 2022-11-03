@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook github google_oauth2]
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook github google_oauth2 linkedin]
 
   # method to find the user by provider_data , if not found it retrieve email from provider_data and feed devise with a friendly password because
   # devise needs the password

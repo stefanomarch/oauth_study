@@ -279,10 +279,10 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   #  scope is what we would like back from the service
-  config.omniauth :github, retrieve_credential(:github, :client_id), retrieve_credential(:github, :secret), scope: 'public_profile, email'
+  config.omniauth :github, retrieve_credential(:github, :client_id), retrieve_credential(:github, :secret)
   config.omniauth :facebook, retrieve_credential(:facebook, :client_id), retrieve_credential(:facebook, :secret)
-  config.omniauth :google_oauth2, retrieve_credential(:google, :client_id), retrieve_credential(:google, :secret),
-                  scope: 'userinfo.email, userinfo.profile'
+  config.omniauth :google_oauth2, retrieve_credential(:google, :client_id), retrieve_credential(:google, :secret)
+  config.omniauth :linkedin, retrieve_credential(:linkedin, :client_id), retrieve_credential(:linkedin, :secret), scope: 'r_emailaddress'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

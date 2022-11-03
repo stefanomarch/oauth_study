@@ -32,6 +32,17 @@ class OmniauthCallbackController < ApplicationController
     end
   end
 
+  def linkedin
+    @user = User.create_from_provider_data(request.env['omniauth.auth'])
+    if @user.persisted?
+      bybeug
+      sign_in_and_redirect @user
+    else
+      flash[:error] = 'There was a problem signing you by Linkedin. Please register or try signin in later'
+      redirect_to new_user_registration_path
+    end
+  end
+
   def failure
     flash[:error] = 'There was a problem signing you in .Please register or try signin in later'
     redirect_to new_user_registration_path

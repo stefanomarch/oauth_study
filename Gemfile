@@ -33,11 +33,11 @@ gem 'devise'
 gem 'nokogiri'
 gem 'ruby_parser'
 
-gem 'omniauth', '~> 2.0'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin-oauth2', '~> 1.0'
+gem 'omniauth-oauth2'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 gem 'activerecord-session_store'
@@ -85,5 +85,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-
