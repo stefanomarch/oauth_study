@@ -282,7 +282,7 @@ Devise.setup do |config|
   config.omniauth :github, retrieve_credential(:github, :client_id), retrieve_credential(:github, :secret)
   config.omniauth :facebook, retrieve_credential(:facebook, :client_id), retrieve_credential(:facebook, :secret)
   config.omniauth :google_oauth2, retrieve_credential(:google, :client_id), retrieve_credential(:google, :secret)
-  config.omniauth :linkedin, retrieve_credential(:linkedin, :client_id), retrieve_credential(:linkedin, :secret), scope: 'r_emailaddress'
+  config.omniauth :linkedin, retrieve_credential(:linkedin, :client_id), retrieve_credential(:linkedin, :secret)
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
