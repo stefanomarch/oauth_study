@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <h1> Hello <%= current_user.email.split('@').first %></h1>
+  <%= turbo_frame_tag do %>
+    <h2><%= link_to('Logout', destroy_user_session_path, data: { "turbo-method": :delete }) %></h2>
+  <% end %>
+<% else %>
+  <%= turbo_frame_tag do %>
+  <h1>Welcome</h1>
+    <h2><%= link_to('Sign_up', new_user_registration_path, data: { "turbo-method": :get}) %></h2>
+  <% end %>
+<% end %>
