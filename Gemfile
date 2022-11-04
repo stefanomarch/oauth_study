@@ -37,6 +37,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin-oauth2', '~> 1.0'
+gem 'omniauth-microsoft-office365'
 gem 'omniauth-oauth2'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 

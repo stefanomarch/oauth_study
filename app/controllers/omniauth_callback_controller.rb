@@ -3,47 +3,39 @@
 # Create user from the provider data
 class OmniauthCallbackController < ApplicationController
   def google_oauth2
-    @user = User.create_from_provider_data(request.env['omniauth.auth'])
-    if @user.persisted?
-      sign_in_and_redirect @user
-    else
-      flash[:error] = 'There was a problem signing you by google. Please register or try signin in later'
-      redirect_to new_user_registration_path
-    end
+    manage_user_with_omniauth(:google_oauth2)
   end
 
   def facebook
-    @user = User.create_from_provider_data(request.env['omniauth.auth'])
-    if @user.persisted?
-      sign_in_and_redirect @user
-    else
-      flash[:error] = 'There was a problem signing you through Facebook. Please register or try signin in later'
-      redirect_to new_user_registration_path
-    end
+    manage_user_with_omniauth(:facebook)
   end
 
   def github
-    @user = User.create_from_provider_data(request.env['omniauth.auth'])
-    if @user.persisted?
-      sign_in_and_redirect @user
-    else
-      flash[:error] = 'There was a problem signing you by Github. Please register or try signin in later'
-      redirect_to new_user_registration_path
-    end
+    manage_user_with_omniauth(:github)
   end
 
   def linkedin
-    @user = User.create_from_provider_data(request.env['omniauth.auth'])
-    if @user.persisted?
-      sign_in_and_redirect @user
-    else
-      flash[:error] = 'There was a problem signing you by Linkedin. Please register or try signin in later'
-      redirect_to new_user_registration_path
-    end
+    manage_user_with_omniauth(:linkedin)
+  end
+
+  def microsoft_office365
+    manage_user_with_omniauth(:microsoft_office365)
   end
 
   def failure
     flash[:error] = 'There was a problem signing you in .Please register or try signin in later'
     redirect_to new_user_registration_path
+  end
+
+  private
+
+  def manage_user_with_omniauth(provider)
+    @user = User.create_from_provider_data(request.env['omniauth.auth'])
+    if @user.persisted?
+      sign_in_and_redirect @user
+    else
+      flash[:error] = "There was a problem signing you in with #{provider.to_s.capitalize} .Please register or try signin in later"
+      redirect_to new_user_registration_path
+    end
   end
 end
